@@ -67,7 +67,12 @@ var _data = {
 function indexGet(req,res){
 	res.send(_data);
 }
-
+function postGame(req,res){
+    console.log(req.body);
+    _data = req.body;
+    res.send(req.body);
+}
 module.exports={
-	index: indexGet
+	index: indexGet,
+    post: postGame
 };
