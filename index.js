@@ -12,7 +12,24 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json 
 app.use(bodyParser.json())
  
-var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+// var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+ 
+// // setup e-mail data with unicode symbols 
+// var mailOptions = {
+//     from: '"People Seeker👥" <cal_leahy3@hotmail.com>', // sender address 
+//     to: 'callumleahy23@googlemail.com, cal_leahy2@hotmail.com', // list of receivers 
+//     subject: 'People Seeker found you', // Subject line 
+//     text: 'You got some attention on people seeker', // plaintext body 
+//     html: '<b>You got some attention on people seeker🐴</b>' // html body 
+// };
+ 
+// // send mail with defined transport object 
+// transporter.sendMail(mailOptions, function(error, info){
+//     if(error){
+//         return console.log(error);
+//     }
+//     console.log('Message sent: ' + info.response);
+// });
 app.set('view engine', 'ejs');
 //uses the layouts modules
 app.use(layouts);
