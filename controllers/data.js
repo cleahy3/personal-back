@@ -82,7 +82,7 @@ var _data = {
         title: 'Salesperson',
         company: 'Dixons',
         location: 'Wakefield'
-    }]
+    }],
     favourites: [],
     authUser: [{
         user: 'test',
