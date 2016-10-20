@@ -58,29 +58,57 @@ var _data = {
         isLiked: false
 
     }],
+    jobs: [{
+        title: 'Software Engineer',
+        company: 'Sky Betting And Gaming',
+        location: 'Leeds'
+    }, {
+        title: 'Checkout Supervisor',
+        company: 'Asda',
+        location: 'Sheffield'
+    }, {
+        title: 'Business Advisor',
+        company: 'BJSS',
+        location: 'Leeds'
+    }, {
+        title: 'Mechanical Engineer',
+        company: 'BMW',
+        location: 'Wakefield'
+    }, {
+        title: 'Aerospace Engineer',
+        company: 'RocketTech',
+        location: 'Manchester'
+    }, {
+        title: 'Salesperson',
+        company: 'Dixons',
+        location: 'Wakefield'
+    }]
     favourites: [],
     authUser: [{
         user: 'test',
         password: 'test',
-        favourites:[]
+        type: 'employer',
+        favourites: []
     }, {
         user: 'test1',
         password: 'test1',
+        type: 'employee',
         favourites: []
     }],
     compareUser: {},
     loggedIndex: 0
 }
 
-function indexGet(req,res){
-	res.send(_data);
+function indexGet(req, res) {
+    res.send(_data);
 }
-function postGame(req,res){
+
+function postGame(req, res) {
     console.log(req.body);
     _data = req.body;
     res.send(req.body);
 }
-module.exports={
-	index: indexGet,
+module.exports = {
+    index: indexGet,
     post: postGame
 };
